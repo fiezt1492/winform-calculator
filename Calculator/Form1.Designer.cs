@@ -376,15 +376,16 @@
             this.LabelBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LabelBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.LabelBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.LabelBox.Enabled = false;
             this.LabelBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.LabelBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.LabelBox.Location = new System.Drawing.Point(11, 11);
+            this.LabelBox.MaxLength = 20;
             this.LabelBox.Name = "LabelBox";
             this.LabelBox.ReadOnly = true;
             this.LabelBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.LabelBox.Size = new System.Drawing.Size(274, 31);
             this.LabelBox.TabIndex = 29;
-            this.LabelBox.Text = "\r\n\r\n";
             this.LabelBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.LabelBox.WordWrap = false;
             // 
@@ -392,8 +393,10 @@
             // 
             this.InputBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.InputBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.InputBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.InputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.InputBox.Location = new System.Drawing.Point(11, 52);
+            this.InputBox.MaxLength = 20;
             this.InputBox.Name = "InputBox";
             this.InputBox.ReadOnly = true;
             this.InputBox.RightToLeft = System.Windows.Forms.RightToLeft.No;

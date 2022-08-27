@@ -32,6 +32,9 @@ namespace Calculator
 
         private void numberClick(object sender, EventArgs e)
         {
+            if (InputBox.Text.Length > 19)
+                return;
+
             if (InputBox.Text == "0" || operatorPressed || ans.Length > 0)
                 InputBox.Clear();
 
