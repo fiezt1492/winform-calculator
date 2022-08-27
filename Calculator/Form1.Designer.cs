@@ -184,6 +184,7 @@
             // 
             // clearBtn
             // 
+            this.clearBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.clearBtn.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.clearBtn.Location = new System.Drawing.Point(123, 139);
             this.clearBtn.Name = "clearBtn";
@@ -372,34 +373,42 @@
             // LabelBox
             // 
             this.LabelBox.BackColor = System.Drawing.SystemColors.Control;
+            this.LabelBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LabelBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.LabelBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.LabelBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.LabelBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.LabelBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.LabelBox.Location = new System.Drawing.Point(11, 11);
-            this.LabelBox.Multiline = true;
             this.LabelBox.Name = "LabelBox";
             this.LabelBox.ReadOnly = true;
-            this.LabelBox.Size = new System.Drawing.Size(274, 35);
+            this.LabelBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.LabelBox.Size = new System.Drawing.Size(274, 31);
             this.LabelBox.TabIndex = 29;
-            this.LabelBox.Text = "\r\n\r\n0";
+            this.LabelBox.Text = "\r\n\r\n";
             this.LabelBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.LabelBox.WordWrap = false;
             // 
             // InputBox
             // 
+            this.InputBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.InputBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.InputBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.InputBox.Location = new System.Drawing.Point(11, 52);
-            this.InputBox.Multiline = true;
             this.InputBox.Name = "InputBox";
-            this.InputBox.Size = new System.Drawing.Size(274, 35);
+            this.InputBox.ReadOnly = true;
+            this.InputBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.InputBox.Size = new System.Drawing.Size(274, 31);
             this.InputBox.TabIndex = 0;
             this.InputBox.Text = "0";
             this.InputBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.InputBox.WordWrap = false;
             // 
             // Form1
             // 
+            this.AcceptButton = this.equalBtn;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.clearBtn;
             this.ClientSize = new System.Drawing.Size(297, 372);
             this.Controls.Add(this.LabelBox);
             this.Controls.Add(this.equalBtn);
@@ -439,6 +448,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -11,6 +11,7 @@ namespace Calculator
         bool memoryStored = false;
         Double temp = 0;
         Double memory = 0;
+        string ans = "";
 
         public static string[] textBox = new string[3];
         public Form1()
@@ -31,7 +32,7 @@ namespace Calculator
 
         private void numberClick(object sender, EventArgs e)
         {
-            if (InputBox.Text == "0" || operatorPressed)
+            if (InputBox.Text == "0" || operatorPressed || ans.Length > 0)
                 InputBox.Clear();
 
             if (InputBox.Text.Length == 2 && InputBox.Text == "-0")
@@ -40,10 +41,19 @@ namespace Calculator
             Button button = sender as Button;
             operatorPressed = false;
 
-            if (button.Text == "." && InputBox.Text.Contains("."))
-                return;
+            if (button.Text == ".")
+            {
+                if (InputBox.Text.Contains("."))
+                    return;
+                if (InputBox.Text.Length <= 0)
+                {
+                    InputBox.Text = "0.";
+                    return;
+                }
+            }
 
             InputBox.Text += button.Text;
+            ans = "";
         }
 
         private void equalClick(object sender, EventArgs e)
@@ -65,8 +75,10 @@ namespace Calculator
                 default:
                     break;
             }
+
             LabelBox.Clear();
             temp = Double.Parse(InputBox.Text);
+            ans = temp.ToString();
             operation = "";
         }
 
@@ -95,6 +107,7 @@ namespace Calculator
             if (LabelBox.Text.Length > 0) LabelBox.Clear();
             temp = 0;
             operation = "";
+            ans = "";
         }
 
         private void convertEntryPosNeg(object sender, EventArgs e)
@@ -114,11 +127,6 @@ namespace Calculator
             }
 
             InputBox.Text = InputBox.Text.Substring(0, InputBox.Text.Length - 1);
-        }
-
-        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
         }
 
         private void quickOperate(object sender, EventArgs e)
@@ -142,6 +150,8 @@ namespace Calculator
                 default:
                     break;
             }
+
+            ans = InputBox.Text;
 
         }
 
@@ -172,6 +182,82 @@ namespace Calculator
             Double num_todo = operatorPressed ? temp : Double.Parse(InputBox.Text);
             if (button.Text == "M+") memory += num_todo;
             else memory -= num_todo;
+        }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            switch (e.KeyChar.ToString())
+            {
+                // number
+                case "1":
+                    oneBtn.PerformClick();
+                    break;
+                case "2":
+                    twoBtn.PerformClick();
+                    break;
+                case "3":
+                    threeBtn.PerformClick();
+                    break;
+                case "4":
+                    fourBtn.PerformClick();
+                    break;
+                case "5":
+                    fiveBtn.PerformClick();
+                    break;
+                case "6":
+                    sixBtn.PerformClick();
+                    break;
+                case "7":
+                    sevenBtn.PerformClick();
+                    break;
+                case "8":
+                    eightBtn.PerformClick();
+                    break;
+                case "9":
+                    nineBtn.PerformClick();
+                    break;
+                case "0":
+                    zeroBtn.PerformClick();
+                    break;
+                case ".":
+                    dotBtn.PerformClick();
+                    break;
+                // operators
+                case "+":
+                    addBtn.PerformClick();
+                    break;
+                case "-":
+                    subBtn.PerformClick();
+                    break;
+                case "*":
+                    mulBtn.PerformClick();
+                    break;
+                case "/":
+                    divBtn.PerformClick();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Back:
+                    delBtn.PerformClick();
+                    break;
+                case Keys.Return:
+                    equalBtn.PerformClick();
+                    break;
+                case Keys.Escape:
+                    clearEntryBtn.PerformClick();
+                    break;
+                default:
+                    break;
+            }
+               
         }
     }
 }
