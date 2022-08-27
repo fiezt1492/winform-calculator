@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.oneBtn = new System.Windows.Forms.Button();
             this.twoBtn = new System.Windows.Forms.Button();
@@ -59,6 +60,7 @@
             this.equalBtn = new System.Windows.Forms.Button();
             this.LabelBox = new System.Windows.Forms.TextBox();
             this.InputBox = new System.Windows.Forms.TextBox();
+            this.tooltip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // oneBtn
@@ -69,6 +71,7 @@
             this.oneBtn.Size = new System.Drawing.Size(50, 40);
             this.oneBtn.TabIndex = 1;
             this.oneBtn.Text = "1";
+            this.tooltip1.SetToolTip(this.oneBtn, "Number");
             this.oneBtn.UseVisualStyleBackColor = true;
             this.oneBtn.Click += new System.EventHandler(this.numberClick);
             // 
@@ -80,6 +83,7 @@
             this.twoBtn.Size = new System.Drawing.Size(50, 40);
             this.twoBtn.TabIndex = 2;
             this.twoBtn.Text = "2";
+            this.tooltip1.SetToolTip(this.twoBtn, "Number");
             this.twoBtn.UseVisualStyleBackColor = true;
             this.twoBtn.Click += new System.EventHandler(this.numberClick);
             // 
@@ -91,6 +95,7 @@
             this.threeBtn.Size = new System.Drawing.Size(50, 40);
             this.threeBtn.TabIndex = 3;
             this.threeBtn.Text = "3";
+            this.tooltip1.SetToolTip(this.threeBtn, "Number");
             this.threeBtn.UseVisualStyleBackColor = true;
             this.threeBtn.Click += new System.EventHandler(this.numberClick);
             // 
@@ -102,6 +107,7 @@
             this.fourBtn.Size = new System.Drawing.Size(50, 40);
             this.fourBtn.TabIndex = 4;
             this.fourBtn.Text = "4";
+            this.tooltip1.SetToolTip(this.fourBtn, "Number");
             this.fourBtn.UseVisualStyleBackColor = true;
             this.fourBtn.Click += new System.EventHandler(this.numberClick);
             // 
@@ -113,6 +119,7 @@
             this.fiveBtn.Size = new System.Drawing.Size(50, 40);
             this.fiveBtn.TabIndex = 5;
             this.fiveBtn.Text = "5";
+            this.tooltip1.SetToolTip(this.fiveBtn, "Number");
             this.fiveBtn.UseVisualStyleBackColor = true;
             this.fiveBtn.Click += new System.EventHandler(this.numberClick);
             // 
@@ -124,6 +131,7 @@
             this.sixBtn.Size = new System.Drawing.Size(50, 40);
             this.sixBtn.TabIndex = 6;
             this.sixBtn.Text = "6";
+            this.tooltip1.SetToolTip(this.sixBtn, "Number");
             this.sixBtn.UseVisualStyleBackColor = true;
             this.sixBtn.Click += new System.EventHandler(this.numberClick);
             // 
@@ -135,6 +143,7 @@
             this.sevenBtn.Size = new System.Drawing.Size(50, 40);
             this.sevenBtn.TabIndex = 7;
             this.sevenBtn.Text = "7";
+            this.tooltip1.SetToolTip(this.sevenBtn, "Number");
             this.sevenBtn.UseVisualStyleBackColor = true;
             this.sevenBtn.Click += new System.EventHandler(this.numberClick);
             // 
@@ -146,6 +155,7 @@
             this.eightBtn.Size = new System.Drawing.Size(50, 40);
             this.eightBtn.TabIndex = 8;
             this.eightBtn.Text = "8";
+            this.tooltip1.SetToolTip(this.eightBtn, "Number");
             this.eightBtn.UseVisualStyleBackColor = true;
             this.eightBtn.Click += new System.EventHandler(this.numberClick);
             // 
@@ -157,6 +167,7 @@
             this.nineBtn.Size = new System.Drawing.Size(50, 40);
             this.nineBtn.TabIndex = 9;
             this.nineBtn.Text = "9";
+            this.tooltip1.SetToolTip(this.nineBtn, "Number");
             this.nineBtn.UseVisualStyleBackColor = true;
             this.nineBtn.Click += new System.EventHandler(this.numberClick);
             // 
@@ -168,6 +179,7 @@
             this.zeroBtn.Size = new System.Drawing.Size(106, 40);
             this.zeroBtn.TabIndex = 10;
             this.zeroBtn.Text = "0";
+            this.tooltip1.SetToolTip(this.zeroBtn, "Number");
             this.zeroBtn.UseVisualStyleBackColor = true;
             this.zeroBtn.Click += new System.EventHandler(this.numberClick);
             // 
@@ -179,6 +191,7 @@
             this.dotBtn.Size = new System.Drawing.Size(50, 40);
             this.dotBtn.TabIndex = 11;
             this.dotBtn.Text = ".";
+            this.tooltip1.SetToolTip(this.dotBtn, "Decimal");
             this.dotBtn.UseVisualStyleBackColor = true;
             this.dotBtn.Click += new System.EventHandler(this.numberClick);
             // 
@@ -191,6 +204,7 @@
             this.clearBtn.Size = new System.Drawing.Size(50, 40);
             this.clearBtn.TabIndex = 14;
             this.clearBtn.Text = "C";
+            this.tooltip1.SetToolTip(this.clearBtn, "Clear All");
             this.clearBtn.UseVisualStyleBackColor = true;
             this.clearBtn.Click += new System.EventHandler(this.clearClick);
             // 
@@ -202,6 +216,7 @@
             this.clearEntryBtn.Size = new System.Drawing.Size(50, 40);
             this.clearEntryBtn.TabIndex = 13;
             this.clearEntryBtn.Text = "CE";
+            this.tooltip1.SetToolTip(this.clearEntryBtn, "Clear Entry/Input");
             this.clearEntryBtn.UseVisualStyleBackColor = true;
             this.clearEntryBtn.Click += new System.EventHandler(this.clearEntryClick);
             // 
@@ -213,6 +228,7 @@
             this.delBtn.Size = new System.Drawing.Size(50, 40);
             this.delBtn.TabIndex = 12;
             this.delBtn.Text = "🠐";
+            this.tooltip1.SetToolTip(this.delBtn, "Delete");
             this.delBtn.UseVisualStyleBackColor = true;
             this.delBtn.Click += new System.EventHandler(this.delInput);
             // 
@@ -224,6 +240,7 @@
             this.memStore.Size = new System.Drawing.Size(50, 40);
             this.memStore.TabIndex = 17;
             this.memStore.Text = "MS";
+            this.tooltip1.SetToolTip(this.memStore, "Memory Store");
             this.memStore.UseVisualStyleBackColor = true;
             this.memStore.Click += new System.EventHandler(this.memStore_Click);
             // 
@@ -235,6 +252,7 @@
             this.memRecall.Size = new System.Drawing.Size(50, 40);
             this.memRecall.TabIndex = 16;
             this.memRecall.Text = "MR";
+            this.tooltip1.SetToolTip(this.memRecall, "Memory Recall");
             this.memRecall.UseVisualStyleBackColor = true;
             this.memRecall.Click += new System.EventHandler(this.memRecall_Click);
             // 
@@ -246,6 +264,7 @@
             this.memClear.Size = new System.Drawing.Size(50, 40);
             this.memClear.TabIndex = 15;
             this.memClear.Text = "MC";
+            this.tooltip1.SetToolTip(this.memClear, "Memory Clear");
             this.memClear.UseVisualStyleBackColor = true;
             this.memClear.Click += new System.EventHandler(this.memClear_Click);
             // 
@@ -257,6 +276,7 @@
             this.memSub.Size = new System.Drawing.Size(50, 40);
             this.memSub.TabIndex = 21;
             this.memSub.Text = "M-";
+            this.tooltip1.SetToolTip(this.memSub, "Memory Remove");
             this.memSub.UseVisualStyleBackColor = true;
             this.memSub.Click += new System.EventHandler(this.memAddSub_Click);
             // 
@@ -268,6 +288,7 @@
             this.memAdd.Size = new System.Drawing.Size(50, 40);
             this.memAdd.TabIndex = 20;
             this.memAdd.Text = "M+";
+            this.tooltip1.SetToolTip(this.memAdd, "Memory Add");
             this.memAdd.UseVisualStyleBackColor = true;
             this.memAdd.Click += new System.EventHandler(this.memAddSub_Click);
             // 
@@ -279,6 +300,7 @@
             this.sqrtBtn.Size = new System.Drawing.Size(50, 40);
             this.sqrtBtn.TabIndex = 19;
             this.sqrtBtn.Text = "√";
+            this.tooltip1.SetToolTip(this.sqrtBtn, "Quick Operatre Input");
             this.sqrtBtn.UseVisualStyleBackColor = true;
             this.sqrtBtn.Click += new System.EventHandler(this.quickOperate);
             // 
@@ -290,6 +312,7 @@
             this.posNegBtn.Size = new System.Drawing.Size(50, 40);
             this.posNegBtn.TabIndex = 18;
             this.posNegBtn.Text = "±\t";
+            this.tooltip1.SetToolTip(this.posNegBtn, "Positive/Negative");
             this.posNegBtn.UseVisualStyleBackColor = true;
             this.posNegBtn.Click += new System.EventHandler(this.convertEntryPosNeg);
             // 
@@ -301,6 +324,7 @@
             this.percentBtn.Size = new System.Drawing.Size(50, 40);
             this.percentBtn.TabIndex = 25;
             this.percentBtn.Text = "%";
+            this.tooltip1.SetToolTip(this.percentBtn, "Quick Operatre Input");
             this.percentBtn.UseVisualStyleBackColor = true;
             this.percentBtn.Click += new System.EventHandler(this.quickOperate);
             // 
@@ -312,6 +336,7 @@
             this.divBtn.Size = new System.Drawing.Size(50, 40);
             this.divBtn.TabIndex = 24;
             this.divBtn.Text = "/";
+            this.tooltip1.SetToolTip(this.divBtn, "Operator");
             this.divBtn.UseVisualStyleBackColor = true;
             this.divBtn.Click += new System.EventHandler(this.operatorClick);
             // 
@@ -323,6 +348,7 @@
             this.oneDivXBtn.Size = new System.Drawing.Size(50, 40);
             this.oneDivXBtn.TabIndex = 23;
             this.oneDivXBtn.Text = "1/x";
+            this.tooltip1.SetToolTip(this.oneDivXBtn, "Quick Operatre Input");
             this.oneDivXBtn.UseVisualStyleBackColor = true;
             this.oneDivXBtn.Click += new System.EventHandler(this.quickOperate);
             // 
@@ -334,6 +360,7 @@
             this.mulBtn.Size = new System.Drawing.Size(50, 40);
             this.mulBtn.TabIndex = 22;
             this.mulBtn.Text = "*";
+            this.tooltip1.SetToolTip(this.mulBtn, "Operator");
             this.mulBtn.UseVisualStyleBackColor = true;
             this.mulBtn.Click += new System.EventHandler(this.operatorClick);
             // 
@@ -345,6 +372,7 @@
             this.addBtn.Size = new System.Drawing.Size(50, 40);
             this.addBtn.TabIndex = 27;
             this.addBtn.Text = "+";
+            this.tooltip1.SetToolTip(this.addBtn, "Operator");
             this.addBtn.UseVisualStyleBackColor = true;
             this.addBtn.Click += new System.EventHandler(this.operatorClick);
             // 
@@ -356,6 +384,7 @@
             this.subBtn.Size = new System.Drawing.Size(50, 40);
             this.subBtn.TabIndex = 26;
             this.subBtn.Text = "-";
+            this.tooltip1.SetToolTip(this.subBtn, "Operator");
             this.subBtn.UseVisualStyleBackColor = true;
             this.subBtn.Click += new System.EventHandler(this.operatorClick);
             // 
@@ -376,7 +405,6 @@
             this.LabelBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.LabelBox.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.LabelBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.LabelBox.Enabled = false;
             this.LabelBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.LabelBox.ForeColor = System.Drawing.SystemColors.WindowText;
             this.LabelBox.Location = new System.Drawing.Point(11, 11);
@@ -387,6 +415,7 @@
             this.LabelBox.Size = new System.Drawing.Size(274, 31);
             this.LabelBox.TabIndex = 29;
             this.LabelBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tooltip1.SetToolTip(this.LabelBox, "Equation Box");
             this.LabelBox.WordWrap = false;
             // 
             // InputBox
@@ -404,7 +433,12 @@
             this.InputBox.TabIndex = 0;
             this.InputBox.Text = "0";
             this.InputBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tooltip1.SetToolTip(this.InputBox, "Input Box");
             this.InputBox.WordWrap = false;
+            // 
+            // tooltip1
+            // 
+            this.tooltip1.ShowAlways = true;
             // 
             // Form1
             // 
@@ -489,6 +523,7 @@
         private System.Windows.Forms.Button equalBtn;
         private System.Windows.Forms.TextBox LabelBox;
         private System.Windows.Forms.TextBox InputBox;
+        private System.Windows.Forms.ToolTip tooltip1;
     }
 }
 
