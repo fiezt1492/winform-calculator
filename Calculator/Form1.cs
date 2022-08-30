@@ -8,9 +8,8 @@ namespace Calculator
     {
         String operation = "";
         bool operatorPressed = false;
-        bool memoryStored = false;
         Double temp = 0;
-        Double memory = 0;
+        Double? memory = null;
         string ans = "";
 
         public static string[] textBox = new string[3];
@@ -21,8 +20,8 @@ namespace Calculator
 
         private void update_MS_MC_Btn()
         {
-            memRecall.Enabled = memoryStored;
-            memClear.Enabled = memoryStored;
+            memRecall.Enabled = memory == null ? false : true;
+            memClear.Enabled = memory == null ? false : true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -160,27 +159,25 @@ namespace Calculator
 
         private void memClear_Click(object sender, EventArgs e)
         {
-            memoryStored = false;
-            memory = 0;
+            memory = null;
             update_MS_MC_Btn();
         }
 
         private void memStore_Click(object sender, EventArgs e)
         {
-            memoryStored = true;
             memory = Double.Parse(InputBox.Text);
             update_MS_MC_Btn();
         }
 
         private void memRecall_Click(object sender, EventArgs e)
         {
-            if (!memoryStored) return;
+            if (memory == null) return;
             InputBox.Text = memory.ToString();
         }
 
         private void memAddSub_Click(object sender, EventArgs e)
         {
-            if (!memoryStored) return;
+            if (memory == null) return;
             Button button = sender as Button;
             Double num_todo = operatorPressed ? temp : Double.Parse(InputBox.Text);
             if (button.Text == "M+") memory += num_todo;
